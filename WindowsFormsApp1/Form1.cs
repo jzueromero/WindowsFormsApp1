@@ -55,9 +55,11 @@ namespace WindowsFormsApp1
 
 
             #region espacios
+            string Clase = TxtNombreClase.Text;
             string resultado = null;
-            resultado = txtTextoInicial.Text.Replace("{ get; set; }", ",");
-            resultado = resultado.Replace("public", "");
+            // resultado = txtTextoInicial.Text.Replace("{ get; set; }", ",");
+            // resultado = resultado.Replace("public", "");
+            resultado = txtTextoInicial.Text;
             resultado = resultado.TrimStart();
             resultado = resultado.TrimEnd();
             var array = resultado.Split(',');
@@ -72,7 +74,7 @@ namespace WindowsFormsApp1
                     if (ParValorString.Length > 0)
                     {
                         var Par = ParValorString.Split(' ');
-                        ResutaldoFinal += string.Format("private {0} _{1}; {2}  public {0} {1} {2} {3} {2} " +
+                        ResutaldoFinal += string.Format("private {0} _{1};  {2}  public {0} {1} {2} {3} {2} " +
                             "get {2} {3} {2} return _{1}; {4} {2} set {3} _{1} = value; {2} OnPropertyChanged(); " +
                             "{2} {4} {2} {4} ", Par[0].ToString(), Par[1].ToString(), "\r\n", "{", "}");
                     }
@@ -85,6 +87,7 @@ namespace WindowsFormsApp1
             }
             Contador = 0;
             resultado = ResutaldoFinal;
+            resultado = "public class " + Clase + "\r\n {  \r\n  " + resultado + " \r\n  }";
             txtResultado.Text = resultado;
         }
     }

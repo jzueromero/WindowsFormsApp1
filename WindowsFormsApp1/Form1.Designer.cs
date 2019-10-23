@@ -32,11 +32,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.txtTextoInicial = new System.Windows.Forms.TextBox();
+            this.TxtNombreClase = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Mapeo
             // 
-            this.Mapeo.Location = new System.Drawing.Point(24, 186);
+            this.Mapeo.Location = new System.Drawing.Point(24, 244);
             this.Mapeo.Name = "Mapeo";
             this.Mapeo.Size = new System.Drawing.Size(222, 23);
             this.Mapeo.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(252, 186);
+            this.button2.Location = new System.Drawing.Point(252, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(203, 23);
             this.button2.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(24, 229);
+            this.txtResultado.Location = new System.Drawing.Point(24, 286);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -65,17 +66,25 @@
             // 
             // txtTextoInicial
             // 
-            this.txtTextoInicial.Location = new System.Drawing.Point(24, 12);
+            this.txtTextoInicial.Location = new System.Drawing.Point(24, 75);
             this.txtTextoInicial.Multiline = true;
             this.txtTextoInicial.Name = "txtTextoInicial";
             this.txtTextoInicial.Size = new System.Drawing.Size(431, 154);
             this.txtTextoInicial.TabIndex = 5;
             // 
+            // TxtNombreClase
+            // 
+            this.TxtNombreClase.Location = new System.Drawing.Point(24, 37);
+            this.TxtNombreClase.Name = "TxtNombreClase";
+            this.TxtNombreClase.Size = new System.Drawing.Size(431, 20);
+            this.TxtNombreClase.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 481);
+            this.ClientSize = new System.Drawing.Size(491, 538);
+            this.Controls.Add(this.TxtNombreClase);
             this.Controls.Add(this.txtTextoInicial);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.button2);
@@ -93,6 +102,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.TextBox txtTextoInicial;
+        private System.Windows.Forms.TextBox TxtNombreClase;
     }
 }
 
